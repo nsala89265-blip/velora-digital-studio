@@ -844,7 +844,12 @@ document
             [
                 "PODEJŚCIE DO MARKI",
                 "Zanim zaczniemy projekt, poznajemy Twoją markę, jej charakter i potrzeby."
-            ]
+            ],
+
+            [
+    "RESPONSYWNOŚĆ",
+    "Każdą stronę dostosowujemy do telefonów, tabletów i komputerów, aby wyglądała dobrze i działała wygodnie na każdym urządzeniu."
+]
         ],
 
         en: [
@@ -863,7 +868,11 @@ document
             [
                 "BRAND-FIRST APPROACH",
                 "Before we start, we get to know your brand, its character and its needs."
-            ]
+            ],
+            [
+    "RESPONSIVE DESIGN",
+    "Every website is optimized for phones, tablets and computers, ensuring a seamless experience on every device."
+]
         ]
 
     };
