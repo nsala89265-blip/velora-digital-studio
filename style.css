@@ -4222,65 +4222,45 @@ body {
 }
 
 /* =========================================
-   USŁUGA — KAFELKI
+   USŁUGI — KAFELKI
 ========================================= */
 
 .service-options {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 12px;
-
     margin-top: 18px;
 }
 
-
 .service-option {
-
     position: relative;
-
-    cursor: pointer;
-
     display: block;
+    cursor: pointer;
 }
 
-
 .service-option input {
-
     position: absolute;
-
     opacity: 0;
-
     pointer-events: none;
 }
 
-
 .service-option span {
+    position: relative;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     min-height: 65px;
-
     padding: 18px 20px;
 
     border: 1px solid #d9c99f;
-
     background: #fafafa;
 
     font-family: "Manrope", sans-serif;
-
     font-size: 12px;
-
     font-weight: 600;
-
     letter-spacing: 0.06em;
-
     text-align: center;
 
     color: #111111;
@@ -4294,22 +4274,22 @@ body {
 }
 
 
-/* HOVER — taki sam charakter jak budżet */
+/* HOVER */
 
 .service-option:hover span {
-
     background: #ffffff;
-
     border-color: #b89545;
 
     transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 
-/* WYBRANY KAFELEK */
+/* WYBRANA USŁUGA */
 
 .service-option input:checked + span {
-
     background: #ffffff;
 
     border-color: #b89545;
@@ -4323,20 +4303,17 @@ body {
 }
 
 
-/* ZŁOTA LINIA */
+/* ZŁOTA LINIA NA DOLE */
 
 .service-option span::after {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     bottom: 0;
 
     width: 0;
-
     height: 2px;
 
     background: #b89545;
@@ -4344,10 +4321,8 @@ body {
     transition: width 0.35s ease;
 }
 
-
 .service-option:hover span::after,
 .service-option input:checked + span::after {
-
     width: 100%;
 }
 
@@ -4357,9 +4332,7 @@ body {
 @media (max-width: 600px) {
 
     .service-options {
-
         grid-template-columns: 1fr;
-
     }
 
 }

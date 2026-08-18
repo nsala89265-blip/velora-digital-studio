@@ -10,6 +10,7 @@ setTimeout(() => {
 
 
 // =========================
+
 // JĘZYK STRONY
 // =========================
 
@@ -110,25 +111,25 @@ const translations = {
             "+48 000 000 000",
 
         "service-label":
-            "Czego potrzebujesz?",
+    "Czego potrzebujesz?",
 
-        "service-placeholder":
-            "Wybierz usługę",
+"service-website":
+    "Strona internetowa",
 
-        "service-website":
-            "Strona internetowa",
+"service-shop":
+    "Sklep internetowy",
 
-        "service-shop":
-            "Sklep internetowy",
+"service-landing":
+    "Strona promocyjna",
 
-        "service-landing":
-            "Strona promocyjna",
+"service-redesign":
+    "Pomoc i aktualizacje strony",
 
-        "service-redesign":
-            "Pomoc i aktualizacje strony",
+"service-logo":
+    "Logo & identyfikacja",
 
-        "service-other":
-            "Inne",
+"service-other":
+    "Inne",
 
         "budget-label":
             "Jaki masz budżet?",
@@ -266,25 +267,25 @@ const translations = {
             "+48 000 000 000",
 
         "service-label":
-            "What do you need?",
+    "What do you need?",
 
-        "service-placeholder":
-            "Choose a service",
+"service-website":
+    "Website",
 
-        "service-website":
-            "Website",
+"service-shop":
+    "Online store",
 
-        "service-shop":
-            "Online store",
+"service-landing":
+    "Landing page",
 
-        "service-landing":
-            "Landing page",
+"service-redesign":
+    "Website support & updates",
 
-        "service-redesign":
-            "Website support & updates",
+"service-logo":
+    "Logo & brand identity",
 
-        "service-other":
-            "Other",
+"service-other":
+    "Other",
 
         "budget-label":
             "What's your budget?",
@@ -607,6 +608,31 @@ document
     if (elements.serviceLabel)
         elements.serviceLabel.innerHTML =
             `${t["service-label"]} <span>*</span>`;
+
+            // USŁUGI — KAFELKI
+
+const serviceSpans =
+    document.querySelectorAll(".service-option span");
+
+const serviceKeys = [
+    "service-website",
+    "service-shop",
+    "service-landing",
+    "service-redesign",
+    "service-logo",
+    "service-other"
+];
+
+serviceSpans.forEach((span, index) => {
+
+    if (t[serviceKeys[index]]) {
+
+        span.textContent =
+            t[serviceKeys[index]];
+
+    }
+
+});
 
 
     const nameInput =
