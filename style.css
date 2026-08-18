@@ -3701,3 +3701,373 @@ body {
         display: none !important;
     }
 }
+
+/* =========================================
+   VELORA — PREMIUM WOW EFFECTS
+========================================= */
+
+/* ===== DELIKATNY ZŁOTY GLOW ===== */
+
+.hero,
+.about,
+.offer,
+.projects,
+.why-us,
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.about::before,
+.offer::before,
+.projects::before,
+.why-us::before,
+.contact::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(184, 149, 69, 0.10) 0%,
+        rgba(184, 149, 69, 0.04) 35%,
+        transparent 70%
+    );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    animation: veloraGlow 8s ease-in-out infinite alternate;
+}
+
+.hero::before {
+    top: -250px;
+    right: -180px;
+}
+
+.about::before {
+    bottom: -250px;
+    left: -180px;
+}
+
+.offer::before {
+    top: 20%;
+    right: -250px;
+}
+
+.projects::before {
+    bottom: -250px;
+    left: -200px;
+}
+
+.why-us::before {
+    top: -250px;
+    right: -200px;
+}
+
+.contact::before {
+    bottom: -250px;
+    left: -200px;
+}
+
+@keyframes veloraGlow {
+    from {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translate(-30px, 25px) scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   ANIMACJA POJAWIANIA SIĘ
+========================================= */
+
+.hero-label,
+.hero h1,
+.hero-description,
+.hero-button {
+    animation: veloraFadeUp 1s ease both;
+}
+
+.hero-label {
+    animation-delay: 0.2s;
+}
+
+.hero h1 {
+    animation-delay: 0.35s;
+}
+
+.hero-description {
+    animation-delay: 0.5s;
+}
+
+.hero-button {
+    animation-delay: 0.65s;
+}
+
+@keyframes veloraFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   PREMIUM HOVER — OFERTA
+========================================= */
+
+.offer-item {
+    position: relative;
+
+    transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        background 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.offer-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b89545;
+
+    transition: width 0.5s ease;
+}
+
+.offer-item:hover {
+    transform: translateY(-8px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+.offer-item:hover::after {
+    width: 100%;
+}
+
+.offer-item:hover .offer-number {
+    color: #111111;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   PREMIUM HOVER — DLACZEGO VELORA
+========================================= */
+
+.why-item {
+    transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        background 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.why-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b89545;
+
+    transition: width 0.5s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-10px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.07);
+}
+
+.why-item:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   ZŁOTE PODKREŚLENIE
+========================================= */
+
+.section-label {
+    transition:
+        letter-spacing 0.4s ease,
+        color 0.4s ease;
+}
+
+.section-label:hover {
+    color: #b89545;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================
+   PRZYCISKI
+========================================= */
+
+.hero-button,
+.contact-button,
+.form-submit {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.hero-button::before,
+.contact-button::before,
+.form-submit::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transition: left 0.7s ease;
+}
+
+.hero-button:hover,
+.contact-button:hover,
+.form-submit:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(184, 149, 69, 0.18);
+}
+
+.hero-button:hover::before,
+.contact-button:hover::before,
+.form-submit:hover::before {
+    left: 120%;
+}
+
+
+/* =========================================
+   LINKI "ODKRYJ"
+========================================= */
+
+.offer-link {
+    transition:
+        letter-spacing 0.3s ease,
+        color 0.3s ease;
+}
+
+.offer-link span {
+    display: inline-block;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.offer-link:hover {
+    color: #b89545;
+
+    letter-spacing: 0.08em;
+}
+
+.offer-link:hover span {
+    transform: translateX(8px);
+}
+
+
+/* =========================================
+   ZŁOTA LINIA PRZY HOVERZE
+========================================= */
+
+.offer-item,
+.why-item {
+    overflow: hidden;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   — dla osób, które wyłączają animacje
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================
+   TELEFONY
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero::before,
+    .about::before,
+    .offer::before,
+    .projects::before,
+    .why-us::before,
+    .contact::before {
+        width: 300px;
+        height: 300px;
+
+        filter: blur(20px);
+    }
+
+    .offer-item:hover,
+    .why-item:hover {
+        transform: translateY(-4px);
+    }
+
+}
