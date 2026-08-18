@@ -703,7 +703,7 @@ serviceSpans.forEach((span, index) => {
 
     if (elements.consent)
         elements.consent.innerHTML =
-            t["consent"]} ;
+            t["consent"];
 
 
     // PRZYCISK FORMULARZA
