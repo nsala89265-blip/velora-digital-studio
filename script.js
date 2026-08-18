@@ -1058,34 +1058,39 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 // SCROLL REVEAL — VELORA
 // =========================================
 
-const scrollElements = document.querySelectorAll(
-    ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item, .service-option, .budget-option, .form-group"
-);
+document.addEventListener("DOMContentLoaded", () => {
 
-const scrollObserver = new IntersectionObserver(
-    (entries) => {
+    const scrollElements = document.querySelectorAll(
+        ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item, .service-option, .budget-option, .form-group"
+    );
 
-        entries.forEach((entry) => {
+    // Od razu przygotowujemy elementy do animacji
+    scrollElements.forEach(element => {
+        element.classList.add("scroll-reveal");
+    });
 
-            if (entry.isIntersecting) {
+    const scrollObserver = new IntersectionObserver(
+        (entries, observer) => {
 
-                entry.target.classList.add("scroll-reveal");
+            entries.forEach(entry => {
 
-                requestAnimationFrame(() => {
+                if (entry.isIntersecting) {
+
                     entry.target.classList.add("visible");
-                });
 
-                scrollObserver.unobserve(entry.target);
-            }
+                    observer.unobserve(entry.target);
+                }
 
-        });
+            });
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+        },
+        {
+            threshold: 0.15
+        }
+    );
 
-scrollElements.forEach((element) => {
-    scrollObserver.observe(element);
+    scrollElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
+
 });
