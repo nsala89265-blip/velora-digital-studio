@@ -448,20 +448,20 @@ function changeLanguage(lang) {
     const elements = getElements();
 
 
-    // =========================
-    // NAVBAR — TŁUMACZENIE
-    // =========================
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
 
-        const plText = link.dataset.pl;
-        const enText = link.dataset.en;
+ // =========================
+// PL / EN — DESKTOP + MOBILE
+// =========================
 
-        if (plText && enText) {
-            link.textContent = lang === "pl"
-                ? plText
-                : enText;
-        }
+document
+    .querySelectorAll(".language-btn, .mobile-language-btn")
+    .forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.lang === lang
+        );
 
     });
 
@@ -929,24 +929,27 @@ function changeLanguage(lang) {
     });
 
 
+ 
+
+  
+
+
     // =========================
-    // PRZEŁĄCZNIK
+    // MOBILE MENU — TŁUMACZENIE
     // =========================
 
-  document
-    .querySelectorAll(".language-btn, .mobile-language-btn")
-    .forEach(button => {
+    document.querySelectorAll(".mobile-menu-link").forEach(link => {
 
-        button.addEventListener("click", () => {
+        const text = link.querySelector("strong");
 
-            const lang = button.dataset.lang;
+        if (!text) return;
 
-            changeLanguage(lang);
-
-        });
+        text.textContent =
+            lang === "pl"
+                ? link.dataset.pl
+                : link.dataset.en;
 
     });
-
 
     // =========================
     // ZAPIS JĘZYKA
