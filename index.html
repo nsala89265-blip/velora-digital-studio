@@ -1145,47 +1145,115 @@ Opowiedz nam o swoim projekcie poprzez formularz poniżej lub napisz bezpośredn
             </div>
 
 
-            <!-- USŁUGA -->
+           <!-- USŁUGA -->
 
-            <div class="form-group">
+<div class="form-group">
 
-                <label for="service">
-                    Czego potrzebujesz? <span>*</span>
-                </label>
+    <label>
+        Czego potrzebujesz? <span>*</span>
+    </label>
 
-                <select
-                    id="service"
-                    name="service"
-                    required
-                >
+    <div class="service-options">
 
-                    <option value="" selected disabled>
-                        Wybierz usługę
-                    </option>
+        <label class="service-option">
 
-                    <option value="strona">
-                        Strona internetowa
-                    </option>
+            <input
+                type="radio"
+                name="service"
+                value="strona"
+                required
+            >
 
-                    <option value="sklep">
-                        Sklep internetowy
-                    </option>
+            <span class="service-content">
+                <small>01</small>
+                <strong>STRONA INTERNETOWA</strong>
+            </span>
 
-                    <option value="landing">
-                        Strona promocyjna
-                    </option>
+        </label>
 
-                    <option value="redesign">
-                        Pomoc i aktualizacje strony
-                    </option>
 
-                    <option value="inne">
-                        Inne
-                    </option>
+        <label class="service-option">
 
-                </select>
+            <input
+                type="radio"
+                name="service"
+                value="sklep"
+            >
 
-            </div>
+            <span class="service-content">
+                <small>02</small>
+                <strong>SKLEP INTERNETOWY</strong>
+            </span>
+
+        </label>
+
+
+        <label class="service-option">
+
+            <input
+                type="radio"
+                name="service"
+                value="landing"
+            >
+
+            <span class="service-content">
+                <small>03</small>
+                <strong>STRONA PROMOCYJNA</strong>
+            </span>
+
+        </label>
+
+
+        <label class="service-option">
+
+            <input
+                type="radio"
+                name="service"
+                value="redesign"
+            >
+
+            <span class="service-content">
+                <small>04</small>
+                <strong>POMOC I AKTUALIZACJE</strong>
+            </span>
+
+        </label>
+
+
+        <label class="service-option">
+
+            <input
+                type="radio"
+                name="service"
+                value="logo"
+            >
+
+            <span class="service-content">
+                <small>05</small>
+                <strong>LOGO & IDENTYFIKACJA</strong>
+            </span>
+
+        </label>
+
+
+        <label class="service-option">
+
+            <input
+                type="radio"
+                name="service"
+                value="inne"
+            >
+
+            <span class="service-content">
+                <small>06</small>
+                <strong>INNE</strong>
+            </span>
+
+        </label>
+
+    </div>
+
+</div>
 
 
             <!-- BUDŻET -->

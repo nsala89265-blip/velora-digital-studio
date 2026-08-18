@@ -4071,3 +4071,152 @@ body {
     }
 
 }
+
+/* =========================================
+   USŁUGI — KAFELKI
+========================================= */
+
+.service-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.service-option {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.service-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.service-content {
+    min-height: 105px;
+
+    padding: 22px 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid #d9c99f;
+
+    background: #fafafa;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.service-content small {
+    font-family: "Bodoni Moda", Georgia, serif;
+
+    font-size: 15px;
+
+    color: #b89545;
+
+    transition: color 0.35s ease;
+}
+
+.service-content strong {
+    margin-top: 20px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: #111111;
+}
+
+
+/* HOVER */
+
+.service-option:hover .service-content {
+    background: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* WYBRANY KAFELEK */
+
+.service-option input:checked + .service-content {
+    background: #ffffff;
+
+    border-color: #b89545;
+
+    box-shadow:
+        0 12px 35px rgba(184, 149, 69, 0.12);
+
+    transform: translateY(-3px);
+}
+
+.service-option input:checked + .service-content small {
+    color: #111111;
+}
+
+
+/* ZŁOTA LINIA */
+
+.service-content::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b89545;
+
+    transition: width 0.4s ease;
+}
+
+.service-option:hover .service-content::after,
+.service-option input:checked + .service-content::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   TELEFON
+========================================= */
+
+@media (max-width: 600px) {
+
+    .service-options {
+        grid-template-columns: 1fr;
+    }
+
+    .service-content {
+        min-height: 90px;
+
+        padding: 20px;
+    }
+
+}
