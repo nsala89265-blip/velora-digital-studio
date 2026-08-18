@@ -1048,7 +1048,13 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 
     });
 
-    // =========================================
+    
+
+}
+
+
+
+// =========================================
 // SCROLL REVEAL — VELORA
 // =========================================
 
@@ -1083,5 +1089,3 @@ const scrollObserver = new IntersectionObserver(
 scrollElements.forEach((element) => {
     scrollObserver.observe(element);
 });
-
-}
