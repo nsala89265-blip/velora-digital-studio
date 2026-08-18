@@ -1060,36 +1060,32 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const scrollElements = document.querySelectorAll(
+    const elements = document.querySelectorAll(
         ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item"
     );
 
-    const scrollObserver = new IntersectionObserver(
-        (entries, observer) => {
+    const observer = new IntersectionObserver(
+        (entries) => {
 
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
 
                 if (entry.isIntersecting) {
-
                     entry.target.classList.add("visible");
-
-                    observer.unobserve(entry.target);
-
                 }
 
             });
 
         },
         {
-            threshold: 0.15
+            threshold: 0.1
         }
     );
 
-    scrollElements.forEach(element => {
+    elements.forEach((element) => {
 
         element.classList.add("scroll-reveal");
 
-        scrollObserver.observe(element);
+        observer.observe(element);
 
     });
 
