@@ -4222,7 +4222,7 @@ body {
 }
 
 /* =========================================
-   USŁUGI — KAFELKI
+   USŁUGI — TAKIE SAME JAK BUDŻET
 ========================================= */
 
 .service-options {
@@ -4245,8 +4245,6 @@ body {
 }
 
 .service-option span {
-    position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4268,11 +4266,9 @@ body {
     transition:
         background 0.35s ease,
         border-color 0.35s ease,
-        color 0.35s ease,
         transform 0.35s ease,
         box-shadow 0.35s ease;
 }
-
 
 /* HOVER */
 
@@ -4286,15 +4282,11 @@ body {
         0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-
 /* WYBRANA USŁUGA */
 
 .service-option input:checked + span {
     background: #ffffff;
-
     border-color: #b89545;
-
-    color: #111111;
 
     transform: translateY(-3px);
 
@@ -4302,14 +4294,16 @@ body {
         0 10px 25px rgba(184, 149, 69, 0.12);
 }
 
+/* ZŁOTA LINIA */
 
-/* ZŁOTA LINIA NA DOLE */
+.service-option span {
+    position: relative;
+}
 
 .service-option span::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 0;
 
@@ -4326,13 +4320,10 @@ body {
     width: 100%;
 }
 
-
 /* TELEFON */
 
 @media (max-width: 600px) {
-
     .service-options {
         grid-template-columns: 1fr;
     }
-
 }
