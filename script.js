@@ -933,16 +933,19 @@ function changeLanguage(lang) {
     // PRZEŁĄCZNIK
     // =========================
 
-    document
-        .querySelectorAll(".language-btn")
-        .forEach(button => {
+  document
+    .querySelectorAll(".language-btn, .mobile-language-btn")
+    .forEach(button => {
 
-            button.classList.toggle(
-                "active",
-                button.dataset.lang === lang
-            );
+        button.addEventListener("click", () => {
+
+            const lang = button.dataset.lang;
+
+            changeLanguage(lang);
 
         });
+
+    });
 
 
     // =========================
@@ -962,7 +965,7 @@ function changeLanguage(lang) {
 // =========================
 
 document
-    .querySelectorAll(".language-btn")
+    .querySelectorAll(".language-btn, .mobile-language-btn")
     .forEach(button => {
 
         button.addEventListener("click", () => {
