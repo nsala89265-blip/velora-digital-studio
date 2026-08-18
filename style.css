@@ -1207,13 +1207,13 @@ body {
 .why-grid {
     width: 100%;
 
-    max-width: 1200px;
+    max-width: 1400px;
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     border-top: 1px solid #d9c99f;
 
@@ -1230,7 +1230,7 @@ body {
 
     min-height: 300px;
 
-    padding: 45px 35px;
+    padding: 45px 25px;
 
     border-right: 1px solid #d9c99f;
 
@@ -1242,8 +1242,6 @@ body {
 .why-item:first-child {
     border-left: 1px solid #d9c99f;
 }
-
-
 /* =========================
    NUMER
 ========================= */
@@ -1330,7 +1328,6 @@ body {
 /* =========================
    RESPONSYWNOŚĆ
 ========================= */
-
 @media (max-width: 900px) {
 
     .why-us {
@@ -1341,17 +1338,20 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .why-item:nth-child(2) {
+    .why-item:nth-child(2),
+    .why-item:nth-child(4) {
         border-right: none;
     }
 
-    .why-item:nth-child(3) {
-        border-left: 1px solid #d9c99f;
+    .why-item:nth-child(3),
+    .why-item:nth-child(4),
+    .why-item:nth-child(5) {
         border-top: 1px solid #d9c99f;
     }
 
-    .why-item:nth-child(4) {
-        border-top: 1px solid #d9c99f;
+    .why-item:nth-child(3),
+    .why-item:nth-child(5) {
+        border-left: 1px solid #d9c99f;
     }
 
 }
