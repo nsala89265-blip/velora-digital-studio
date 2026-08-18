@@ -410,8 +410,7 @@ function getElements() {
         serviceLabel:
             document.querySelector('label[for="service"]'),
 
-        service:
-            document.querySelector("#service"),
+     
 
         budgetLabel:
             document.querySelector(".budget-options")
@@ -633,31 +632,7 @@ document
             t["phone-placeholder"];
 
 
-    // SELECT
-
-    if (elements.service) {
-
-        const options =
-            elements.service.querySelectorAll("option");
-
-        options[0].textContent =
-            t["service-placeholder"];
-
-        options[1].textContent =
-            t["service-website"];
-
-        options[2].textContent =
-            t["service-shop"];
-
-        options[3].textContent =
-            t["service-landing"];
-
-        options[4].textContent =
-            t["service-redesign"];
-
-        options[5].textContent =
-            t["service-other"];
-    }
+  
 
 
     // BUDŻET
