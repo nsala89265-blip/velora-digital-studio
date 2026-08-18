@@ -595,11 +595,11 @@ document
 
     if (elements.nameLabel)
         elements.nameLabel.innerHTML =
-            `${t["name-label"]} <span>*</span>`;
+            t["name-label"];
 
     if (elements.emailLabel)
         elements.emailLabel.innerHTML =
-            `${t["email-label"]} <span>*</span>`;
+            t["email-label"];
 
     if (elements.phoneLabel)
         elements.phoneLabel.textContent =
@@ -607,7 +607,7 @@ document
 
     if (elements.serviceLabel)
         elements.serviceLabel.innerHTML =
-            `${t["service-label"]} <span>*</span>`;
+            t["service-label"];
 
             // USŁUGI — KAFELKI
 
@@ -665,7 +665,7 @@ serviceSpans.forEach((span, index) => {
 
     if (elements.budgetLabel)
         elements.budgetLabel.innerHTML =
-            `${t["budget-label"]} <span>*</span>`;
+            t["budget-label"];
 
     const budgetSpans =
         document.querySelectorAll(".budget-option span");
@@ -692,7 +692,7 @@ serviceSpans.forEach((span, index) => {
 
     if (elements.messageLabel)
         elements.messageLabel.innerHTML =
-            `${t["message-label"]} <span>*</span>`;
+            t["message-label"];
 
     if (elements.message)
         elements.message.placeholder =
@@ -703,7 +703,7 @@ serviceSpans.forEach((span, index) => {
 
     if (elements.consent)
         elements.consent.innerHTML =
-            `${t["consent"]} <strong>*</strong>`;
+            t["consent"]} ;
 
 
     // PRZYCISK FORMULARZA
