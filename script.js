@@ -747,7 +747,7 @@ document
                 [
                     "POMOC I AKTUALIZACJE STRONY",
                     "Odświeżenie istniejącej strony i nadanie jej nowoczesnego, spójnego wyglądu."
-                ]
+                ],
 
                 [
     "LOGO & IDENTYFIKACJA",
@@ -771,7 +771,7 @@ document
                 [
                     "REDESIGN",
                     "Refreshing an existing website and giving it a modern, cohesive look."
-                ]
+                ],
 
                 [
     "LOGO & BRAND IDENTITY",
