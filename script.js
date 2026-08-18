@@ -727,7 +727,7 @@ document
     const offerItems =
         document.querySelectorAll(".offer-item");
 
-    if (offerItems.length >= 4) {
+    if (offerItems.length >= 5) {
 
         const offerData = {
 
@@ -748,6 +748,11 @@ document
                     "POMOC I AKTUALIZACJE STRONY",
                     "Odświeżenie istniejącej strony i nadanie jej nowoczesnego, spójnego wyglądu."
                 ]
+
+                [
+    "LOGO & IDENTYFIKACJA",
+    "Tworzymy charakterystyczne logo i spójną identyfikację wizualną dopasowaną do Twojej marki."
+]
             ],
 
             en: [
@@ -767,6 +772,11 @@ document
                     "REDESIGN",
                     "Refreshing an existing website and giving it a modern, cohesive look."
                 ]
+
+                [
+    "LOGO & BRAND IDENTITY",
+    "We create distinctive logos and cohesive visual identities tailored to your brand."
+]
             ]
 
         };
