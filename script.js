@@ -1061,13 +1061,8 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 document.addEventListener("DOMContentLoaded", () => {
 
     const scrollElements = document.querySelectorAll(
-        ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item, .service-option, .budget-option, .form-group"
+        ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item"
     );
-
-    // Od razu przygotowujemy elementy do animacji
-    scrollElements.forEach(element => {
-        element.classList.add("scroll-reveal");
-    });
 
     const scrollObserver = new IntersectionObserver(
         (entries, observer) => {
@@ -1079,6 +1074,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     entry.target.classList.add("visible");
 
                     observer.unobserve(entry.target);
+
                 }
 
             });
@@ -1090,7 +1086,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     scrollElements.forEach(element => {
+
+        element.classList.add("scroll-reveal");
+
         scrollObserver.observe(element);
+
     });
 
 });
