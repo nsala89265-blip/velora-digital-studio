@@ -4227,47 +4227,62 @@ body {
 
 .service-options {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 10px;
 }
 
 .service-option {
     position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 15px;
-
-    border: 1px solid #dddddd;
-
-    background: #fafafa;
+    display: block;
 
     cursor: pointer;
-
-    font-family: "Manrope", sans-serif;
-
-    font-size: 12px;
-
-    color: #444444;
-
-    transition:
-        border-color 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
-}
-
-.service-option:hover {
-    border-color: #b89545;
-
-    background: #ffffff;
 }
 
 .service-option input {
-    accent-color: #b89545;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.service-option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+    padding: 14px 18px;
+
+    border: 1px solid rgba(191, 150, 75, 0.55);
+    background: transparent;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    color: #333333;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+/* NAJECHANIE */
+
+.service-option:hover span {
+    border-color: #b89555;
+    background: rgba(184, 149, 85, 0.06);
+}
+
+/* KLIKNIĘTA / WYBRANA USŁUGA */
+
+.service-option input:checked + span {
+    border-color: #b89555;
+    background: rgba(184, 149, 85, 0.12);
+    color: #9b773b;
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+    .service-options {
+        grid-template-columns: 1fr;
+    }
 }
