@@ -741,11 +741,11 @@ document
                     "Estetyczne i funkcjonalne sklepy online, stworzone z myślą o wygodzie klientów."
                 ],
                 [
-                    "LANDING PAGE",
+                    "  STRONA PROMOCYJNA",
                     "Strony stworzone pod konkretny produkt, usługę lub kampanię."
                 ],
                 [
-                    "REDESIGN",
+                    "POMOC I AKTUALIZACJE STRONY",
                     "Odświeżenie istniejącej strony i nadanie jej nowoczesnego, spójnego wyglądu."
                 ]
             ],
