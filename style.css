@@ -4271,6 +4271,19 @@ body {
         transform 0.3s ease;
 }
 
+.service-option:hover span {
+    border-color: #b89555;
+    background: rgba(184, 149, 85, 0.06);
+    transform: translateY(-2px);
+}
+
+.service-option input:checked + span {
+    border-color: #b89555;
+    background: rgba(184, 149, 85, 0.12);
+    color: #9b773b;
+    transform: translateY(-2px);
+}
+
 /* NAJECHANIE — IDENTYCZNIE JAK BUDŻET */
 
 .service-option:hover span {
