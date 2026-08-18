@@ -4222,17 +4222,18 @@ body {
 }
 
 /* =========================
-   USŁUGI — TAKIE SAME JAK BUDŻET
+   USŁUGI — TAK JAK BUDŻET
 ========================= */
 
 .service-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .service-option {
     position: relative;
+
     display: block;
 
     cursor: pointer;
@@ -4249,11 +4250,13 @@ body {
     align-items: center;
     justify-content: center;
 
-    min-height: 54px;
-    padding: 14px 18px;
+    min-height: 58px;
+    padding: 0 18px;
 
-    border: 1px solid rgba(191, 150, 75, 0.55);
-    background: transparent;
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+
+    background: #ffffff;
 
     font-family: "Manrope", sans-serif;
     font-size: 13px;
@@ -4261,20 +4264,24 @@ body {
 
     text-align: center;
 
-    transition: all 0.3s ease;
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-/* NAJECHANIE */
+/* NAJECHANIE — IDENTYCZNIE JAK BUDŻET */
 
 .service-option:hover span {
-    border-color: #b89555;
-    background: rgba(184, 149, 85, 0.06);
+    border-color: #b89545;
+    transform: translateY(-2px);
 }
 
-/* KLIKNIĘTA / WYBRANA USŁUGA */
+/* WYBRANA USŁUGA */
 
 .service-option input:checked + span {
-    border-color: #b89555;
+    border-color: #b89545;
     background: rgba(184, 149, 85, 0.12);
     color: #9b773b;
 }
