@@ -4308,22 +4308,23 @@ body {
 }
 
 /* =========================================
-   VELORA — PREMIUM REVEAL
-   SZYBSZA WERSJA
+   VELORA — PREMIUM ANIMATIONS
 ========================================= */
 
+/* Wszystkie elementy przed pojawieniem */
 .reveal-element {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(35px);
 
     transition:
-        opacity 0.55s ease,
-        transform 0.55s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2, .8, .2, 1);
 
     will-change: opacity, transform;
 }
 
-.reveal-element.reveal-show {
+/* Element po pojawieniu */
+.reveal-show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -4338,34 +4339,34 @@ body {
 .hero .hero-description,
 .hero .hero-button {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(30px);
 
     transition:
-        opacity 0.55s ease,
-        transform 0.55s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2, .8, .2, 1);
 }
 
 
-/* HERO — SZYBKA KOLEJNOŚĆ */
+/* Kolejność pojawiania się */
 
 .hero .hero-label {
-    transition-delay: 0.05s;
+    transition-delay: 0.15s;
 }
 
 .hero h1 {
-    transition-delay: 0.12s;
+    transition-delay: 0.3s;
 }
 
 .hero .hero-description {
-    transition-delay: 0.20s;
+    transition-delay: 0.45s;
 }
 
 .hero .hero-button {
-    transition-delay: 0.28s;
+    transition-delay: 0.6s;
 }
 
 
-/* HERO — POJAWIENIE */
+/* Po pojawieniu */
 
 .hero.hero-loaded .hero-label,
 .hero.hero-loaded h1,
@@ -4382,11 +4383,11 @@ body {
 
 .navbar {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
 
     transition:
-        opacity 0.5s ease,
-        transform 0.5s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.2, .8, .2, 1);
 }
 
 .navbar.navbar-loaded {
@@ -4402,31 +4403,31 @@ body {
 .offer-item:nth-child(1),
 .project-card:nth-child(1),
 .why-item:nth-child(1) {
-    transition-delay: 0.03s;
+    transition-delay: 0.05s;
 }
 
 .offer-item:nth-child(2),
 .project-card:nth-child(2),
 .why-item:nth-child(2) {
-    transition-delay: 0.10s;
+    transition-delay: 0.15s;
 }
 
 .offer-item:nth-child(3),
 .project-card:nth-child(3),
 .why-item:nth-child(3) {
-    transition-delay: 0.17s;
+    transition-delay: 0.25s;
 }
 
 .offer-item:nth-child(4),
 .project-card:nth-child(4),
 .why-item:nth-child(4) {
-    transition-delay: 0.24s;
+    transition-delay: 0.35s;
 }
 
 .offer-item:nth-child(5),
 .project-card:nth-child(5),
 .why-item:nth-child(5) {
-    transition-delay: 0.31s;
+    transition-delay: 0.45s;
 }
 
 
@@ -4436,77 +4437,31 @@ body {
 
 .service-option:nth-child(1),
 .budget-option:nth-child(1) {
-    transition-delay: 0.03s;
+    transition-delay: 0.05s;
 }
 
 .service-option:nth-child(2),
 .budget-option:nth-child(2) {
-    transition-delay: 0.09s;
+    transition-delay: 0.15s;
 }
 
 .service-option:nth-child(3),
 .budget-option:nth-child(3) {
-    transition-delay: 0.15s;
+    transition-delay: 0.25s;
 }
 
 .service-option:nth-child(4),
 .budget-option:nth-child(4) {
-    transition-delay: 0.21s;
+    transition-delay: 0.35s;
 }
 
 .service-option:nth-child(5),
 .budget-option:nth-child(5) {
-    transition-delay: 0.27s;
+    transition-delay: 0.45s;
 }
 
 .service-option:nth-child(6) {
-    transition-delay: 0.33s;
-}
-
-
-/* =========================================
-   PROJEKTY
-========================================= */
-
-.project-card:nth-child(1) {
-    transition-delay: 0.03s;
-}
-
-.project-card:nth-child(2) {
-    transition-delay: 0.10s;
-}
-
-.project-card:nth-child(3) {
-    transition-delay: 0.17s;
-}
-
-.project-card:nth-child(4) {
-    transition-delay: 0.24s;
-}
-
-
-/* =========================================
-   DLACZEGO VELORA
-========================================= */
-
-.why-item:nth-child(1) {
-    transition-delay: 0.03s;
-}
-
-.why-item:nth-child(2) {
-    transition-delay: 0.10s;
-}
-
-.why-item:nth-child(3) {
-    transition-delay: 0.17s;
-}
-
-.why-item:nth-child(4) {
-    transition-delay: 0.24s;
-}
-
-.why-item:nth-child(5) {
-    transition-delay: 0.31s;
+    transition-delay: 0.55s;
 }
 
 
@@ -4517,20 +4472,20 @@ body {
 @media (max-width: 600px) {
 
     .reveal-element {
-        transform: translateY(18px);
+        transform: translateY(25px);
 
         transition:
-            opacity 0.45s ease,
-            transform 0.45s cubic-bezier(.2, .8, .2, 1);
+            opacity 0.7s ease,
+            transform 0.7s cubic-bezier(.2, .8, .2, 1);
     }
 
     .hero .hero-label,
     .hero h1,
     .hero .hero-description,
     .hero .hero-button {
-        transform: translateY(18px);
+        transform: translateY(22px);
 
-        transition-duration: 0.45s;
+        transition-duration: 0.7s;
     }
 
 }
