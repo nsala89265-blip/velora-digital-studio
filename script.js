@@ -1207,13 +1207,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!cookieBanner) return;
 
 
-    // SPRAWDZAMY, CZY UŻYTKOWNIK JUŻ ZAAKCEPTOWAŁ
+    // Sprawdzamy, czy użytkownik już zaakceptował cookies
 
     const cookiesAccepted =
         localStorage.getItem("veloraCookiesAccepted");
 
 
-    // JEŚLI NIE — POKAŻ BANER
+    // Jeśli nie zaakceptował — pokazujemy baner
 
     if (cookiesAccepted !== "true") {
 
