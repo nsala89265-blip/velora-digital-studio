@@ -4308,23 +4308,22 @@ body {
 }
 
 /* =========================================
-   VELORA — PREMIUM ANIMATIONS
+   VELORA — PREMIUM REVEAL
+   SZYBSZA WERSJA
 ========================================= */
 
-/* Wszystkie elementy przed pojawieniem */
 .reveal-element {
     opacity: 0;
-    transform: translateY(35px);
+    transform: translateY(25px);
 
     transition:
-        opacity 0.9s ease,
-        transform 0.9s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.55s ease,
+        transform 0.55s cubic-bezier(.2, .8, .2, 1);
 
     will-change: opacity, transform;
 }
 
-/* Element po pojawieniu */
-.reveal-show {
+.reveal-element.reveal-show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -4339,34 +4338,34 @@ body {
 .hero .hero-description,
 .hero .hero-button {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
 
     transition:
-        opacity 0.9s ease,
-        transform 0.9s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.55s ease,
+        transform 0.55s cubic-bezier(.2, .8, .2, 1);
 }
 
 
-/* Kolejność pojawiania się */
+/* HERO — SZYBKA KOLEJNOŚĆ */
 
 .hero .hero-label {
-    transition-delay: 0.15s;
+    transition-delay: 0.05s;
 }
 
 .hero h1 {
-    transition-delay: 0.3s;
+    transition-delay: 0.12s;
 }
 
 .hero .hero-description {
-    transition-delay: 0.45s;
+    transition-delay: 0.20s;
 }
 
 .hero .hero-button {
-    transition-delay: 0.6s;
+    transition-delay: 0.28s;
 }
 
 
-/* Po pojawieniu */
+/* HERO — POJAWIENIE */
 
 .hero.hero-loaded .hero-label,
 .hero.hero-loaded h1,
@@ -4383,11 +4382,11 @@ body {
 
 .navbar {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 
     transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.2, .8, .2, 1);
+        opacity 0.5s ease,
+        transform 0.5s cubic-bezier(.2, .8, .2, 1);
 }
 
 .navbar.navbar-loaded {
@@ -4403,31 +4402,31 @@ body {
 .offer-item:nth-child(1),
 .project-card:nth-child(1),
 .why-item:nth-child(1) {
-    transition-delay: 0.05s;
+    transition-delay: 0.03s;
 }
 
 .offer-item:nth-child(2),
 .project-card:nth-child(2),
 .why-item:nth-child(2) {
-    transition-delay: 0.15s;
+    transition-delay: 0.10s;
 }
 
 .offer-item:nth-child(3),
 .project-card:nth-child(3),
 .why-item:nth-child(3) {
-    transition-delay: 0.25s;
+    transition-delay: 0.17s;
 }
 
 .offer-item:nth-child(4),
 .project-card:nth-child(4),
 .why-item:nth-child(4) {
-    transition-delay: 0.35s;
+    transition-delay: 0.24s;
 }
 
 .offer-item:nth-child(5),
 .project-card:nth-child(5),
 .why-item:nth-child(5) {
-    transition-delay: 0.45s;
+    transition-delay: 0.31s;
 }
 
 
@@ -4437,31 +4436,77 @@ body {
 
 .service-option:nth-child(1),
 .budget-option:nth-child(1) {
-    transition-delay: 0.05s;
+    transition-delay: 0.03s;
 }
 
 .service-option:nth-child(2),
 .budget-option:nth-child(2) {
-    transition-delay: 0.15s;
+    transition-delay: 0.09s;
 }
 
 .service-option:nth-child(3),
 .budget-option:nth-child(3) {
-    transition-delay: 0.25s;
+    transition-delay: 0.15s;
 }
 
 .service-option:nth-child(4),
 .budget-option:nth-child(4) {
-    transition-delay: 0.35s;
+    transition-delay: 0.21s;
 }
 
 .service-option:nth-child(5),
 .budget-option:nth-child(5) {
-    transition-delay: 0.45s;
+    transition-delay: 0.27s;
 }
 
 .service-option:nth-child(6) {
-    transition-delay: 0.55s;
+    transition-delay: 0.33s;
+}
+
+
+/* =========================================
+   PROJEKTY
+========================================= */
+
+.project-card:nth-child(1) {
+    transition-delay: 0.03s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.17s;
+}
+
+.project-card:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+
+/* =========================================
+   DLACZEGO VELORA
+========================================= */
+
+.why-item:nth-child(1) {
+    transition-delay: 0.03s;
+}
+
+.why-item:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.why-item:nth-child(3) {
+    transition-delay: 0.17s;
+}
+
+.why-item:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+.why-item:nth-child(5) {
+    transition-delay: 0.31s;
 }
 
 
@@ -4472,20 +4517,20 @@ body {
 @media (max-width: 600px) {
 
     .reveal-element {
-        transform: translateY(25px);
+        transform: translateY(18px);
 
         transition:
-            opacity 0.7s ease,
-            transform 0.7s cubic-bezier(.2, .8, .2, 1);
+            opacity 0.45s ease,
+            transform 0.45s cubic-bezier(.2, .8, .2, 1);
     }
 
     .hero .hero-label,
     .hero h1,
     .hero .hero-description,
     .hero .hero-button {
-        transform: translateY(22px);
+        transform: translateY(18px);
 
-        transition-duration: 0.7s;
+        transition-duration: 0.45s;
     }
 
 }

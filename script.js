@@ -1053,85 +1053,67 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 }
 
 // =========================================
-// VELORA — PREMIUM PAGE ANIMATION
+// VELORA — PREMIUM REVEAL
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =====================================
-    // ZAWSZE START OD GÓRY
-    // =====================================
-
-    if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-
-
-    // =====================================
-    // NAVBAR
-    // =====================================
-
-    const navbar = document.querySelector(".navbar");
-
-    if (navbar) {
-
-        setTimeout(() => {
-            navbar.classList.add("navbar-loaded");
-        }, 150);
-
-    }
-
-
-    // =====================================
-    // HERO — PIERWSZY EKRAN
-    // =====================================
+    /* =====================================
+       HERO + NAVBAR
+    ===================================== */
 
     const hero = document.querySelector(".hero");
+    const navbar = document.querySelector(".navbar");
 
-    if (hero) {
+    setTimeout(() => {
 
-        setTimeout(() => {
+        if (navbar) {
+            navbar.classList.add("navbar-loaded");
+        }
+
+        if (hero) {
             hero.classList.add("hero-loaded");
-        }, 300);
+        }
 
-    }
+    }, 100);
 
 
-    // =====================================
-    // ELEMENTY POZOSTAŁYCH SEKCJI
-    // =====================================
+    /* =====================================
+       ELEMENTY DO SCROLL REVEAL
+    ===================================== */
 
     const revealElements = document.querySelectorAll(`
         .about-frame,
-
         .offer-header,
         .offer-item,
-
         .projects-header,
         .project-card,
-
         .why-header,
         .why-item,
-
         .contact-inner,
-
         .contact-form-header,
         .contact-form .form-group,
+        .service-option,
+        .budget-option,
         .form-consent,
         .form-submit
     `);
 
 
+    /* =====================================
+       PRZYGOTOWANIE ELEMENTÓW
+    ===================================== */
+
     revealElements.forEach(element => {
+
         element.classList.add("reveal-element");
+
     });
 
 
-    // =====================================
-    // SCROLL OBSERVER
-    // =====================================
+    /* =====================================
+       OBSERVER
+    ===================================== */
 
     const revealObserver = new IntersectionObserver(
         (entries, observer) => {
@@ -1150,14 +1132,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         },
         {
-            threshold: 0.12,
-            rootMargin: "0px 0px -60px 0px"
+            threshold: 0.05,
+            rootMargin: "0px 0px 100px 0px"
         }
     );
 
 
+    /* =====================================
+       URUCHOMIENIE OBSERWERA
+    ===================================== */
+
     revealElements.forEach(element => {
+
         revealObserver.observe(element);
+
     });
 
 });
