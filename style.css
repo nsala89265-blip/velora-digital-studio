@@ -1369,20 +1369,14 @@ body {
 
     .why-grid {
         grid-template-columns: 1fr;
-
-        /* usuwamy zewnętrzne linie gridu */
         border: none;
     }
 
     .why-item {
         min-height: auto;
-
         padding: 35px 25px;
 
-        /* dokładna ramka każdego kafelka */
         border: 1px solid #d9c99f;
-
-        /* żeby ramki kolejnych kafelków się nie podwajały */
         margin-top: -1px;
 
         transform: none;
@@ -1390,6 +1384,10 @@ body {
 
     .why-item:first-child {
         margin-top: 0;
+    }
+
+    .why-item:last-child {
+        border-bottom: 1px solid #d9c99f;
     }
 
     .why-number {
@@ -1400,9 +1398,6 @@ body {
         transform: none;
     }
 
-.why-item:last-child {
-    border-bottom: 1px solid #d9c99f;
-}
 }
 /* =========================
    KONTAKT
