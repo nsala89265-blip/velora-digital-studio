@@ -4308,87 +4308,6 @@ body {
 }
 
 /* =========================================
-   VELORA — PREMIUM REVEAL
-========================================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(45px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.2,.8,.2,1);
-
-    will-change: opacity, transform;
-}
-
-.reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================================
-   OPÓŹNIENIA
-========================================= */
-
-.reveal-delay-1 {
-    transition-delay: 0.08s;
-}
-
-.reveal-delay-2 {
-    transition-delay: 0.16s;
-}
-
-.reveal-delay-3 {
-    transition-delay: 0.24s;
-}
-
-.reveal-delay-4 {
-    transition-delay: 0.32s;
-}
-
-.reveal-delay-5 {
-    transition-delay: 0.40s;
-}
-
-.reveal-delay-6 {
-    transition-delay: 0.48s;
-}
-
-
-/* =========================================
-   TELEFON
-========================================= */
-
-@media (max-width: 600px) {
-
-    .reveal {
-        transform: translateY(25px);
-
-        transition:
-            opacity 0.65s ease,
-            transform 0.65s cubic-bezier(.2,.8,.2,1);
-    }
-
-}
-
-
-/* =========================================
-   REDUCED MOTION
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-}
-
-/* =========================================
    VELORA — PREMIUM SCROLL REVEAL
 ========================================= */
 
@@ -4403,7 +4322,7 @@ body {
     will-change: opacity, transform;
 }
 
-.reveal-visible {
+.reveal.reveal-visible {
     opacity: 1;
     transform: translateY(0);
 }

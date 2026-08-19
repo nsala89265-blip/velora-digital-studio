@@ -1055,7 +1055,7 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 
 
 // =========================================
-// VELORA — PREMIUM REVEAL
+// VELORA — PREMIUM SCROLL REVEAL
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1063,38 +1063,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealElements = document.querySelectorAll(`
         .hero-content,
         .about-frame,
-
         .offer-header,
         .offer-item,
-
         .projects-header,
         .project-card,
-
         .why-header,
         .why-item,
-
         .contact-inner,
-
         .contact-form-header,
-        .contact-form .form-group,
+        .form-group,
         .service-option,
         .budget-option,
         .form-consent,
         .form-submit
     `);
 
-
-    // =========================================
-    // DODAJEMY KLASĘ REVEAL
-    // =========================================
-
+    // Dodajemy klasę do wszystkich elementów
     revealElements.forEach(element => {
         element.classList.add("reveal");
     });
 
 
     // =========================================
-    // OBSERWATOR SCROLLA
+    // HERO — POJAWIA SIĘ OD RAZU PO WEJŚCIU
+    // =========================================
+
+    const heroElements = document.querySelectorAll(`
+        .hero-content > *
+    `);
+
+    heroElements.forEach((element, index) => {
+
+        element.classList.add("reveal");
+
+        element.style.transitionDelay =
+            `${index * 0.12}s`;
+
+        setTimeout(() => {
+            element.classList.add("reveal-visible");
+        }, 100);
+
+    });
+
+
+    // =========================================
+    // SCROLL REVEAL
     // =========================================
 
     const observer = new IntersectionObserver(
@@ -1115,18 +1128,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             threshold: 0.12,
-            rootMargin: "0px 0px -40px 0px"
+            rootMargin: "0px 0px -60px 0px"
         }
     );
 
 
-    // =========================================
-    // OBSERWUJEMY WSZYSTKIE ELEMENTY
-    // =========================================
-
     revealElements.forEach(element => {
-        observer.observe(element);
-    });
 
+        // Hero pomijamy, bo pojawia się od razu
+        if (!element.closest(".hero")) {
+            observer.observe(element);
+        }
+
+    });
 
 });
