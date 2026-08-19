@@ -1061,99 +1061,72 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 document.addEventListener("DOMContentLoaded", () => {
 
     const revealElements = document.querySelectorAll(`
-        .hero > *,
-        .section-label,
-        .section-title,
-        .section-description,
+        .hero-content,
+        .about-frame,
 
+        .offer-header,
         .offer-item,
 
+        .projects-header,
         .project-card,
 
+        .why-header,
         .why-item,
 
-        .contact-info > *,
-        .contact-form > *,
+        .contact-inner,
 
-        .form-group,
-
+        .contact-form-header,
+        .contact-form .form-group,
         .service-option,
         .budget-option,
-
-        .hero-button,
-        .contact-button,
+        .form-consent,
         .form-submit
     `);
 
 
-    /* =========================
-       DODANIE KLASY
-    ========================= */
+    // =========================================
+    // DODAJEMY KLASĘ REVEAL
+    // =========================================
 
-    revealElements.forEach((element) => {
+    revealElements.forEach(element => {
         element.classList.add("reveal");
     });
 
 
-    /* =========================
-       ELEMENTY WIDOCZNE OD RAZU
-       (np. HERO)
-    ========================= */
+    // =========================================
+    // OBSERWATOR SCROLLA
+    // =========================================
 
-    const heroElements = document.querySelectorAll(".hero .reveal");
-
-    heroElements.forEach((element, index) => {
-
-        element.style.transitionDelay =
-            `${index * 0.12}s`;
-
-    });
-
-
-    /* =========================
-       HERO — POJAWIENIE
-    ========================= */
-
-    requestAnimationFrame(() => {
-
-        heroElements.forEach((element) => {
-            element.classList.add("is-visible");
-        });
-
-    });
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const scrollObserver = new IntersectionObserver(
+    const observer = new IntersectionObserver(
         (entries, observer) => {
 
-            entries.forEach((entry) => {
+            entries.forEach(entry => {
 
-                if (!entry.isIntersecting) return;
+                if (entry.isIntersecting) {
 
-                entry.target.classList.add("is-visible");
+                    entry.target.classList.add("reveal-visible");
 
-                observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
+
+                }
 
             });
 
         },
         {
             threshold: 0.12,
-            rootMargin: "0px 0px -50px 0px"
+            rootMargin: "0px 0px -40px 0px"
         }
     );
 
 
-    revealElements.forEach((element) => {
+    // =========================================
+    // OBSERWUJEMY WSZYSTKIE ELEMENTY
+    // =========================================
 
-        if (!element.closest(".hero")) {
-            scrollObserver.observe(element);
-        }
-
+    revealElements.forEach(element => {
+        observer.observe(element);
     });
+
 
 });
