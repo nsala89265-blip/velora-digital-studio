@@ -5434,125 +5434,263 @@ body {
 
 }
 
-/* =========================================
-   VELORA — PREMIUM GOLD STYLE
-========================================= */
+/* =====================================================
+   VELORA — PREMIUM NAVIGATION
+===================================================== */
 
-/* ZŁOTY KOLOR VELORA */
 :root {
     --velora-gold: #b89545;
-    --velora-gold-soft: rgba(184, 149, 69, 0.45);
-    --velora-black: #111111;
-    --velora-gray: #777777;
-    --velora-bg: #fafaf8;
+    --velora-gold-light: #c9ad6b;
+    --velora-dark: #111111;
 }
 
 
-/* =========================================
-   MENU — ZŁOTY AKCENT
-========================================= */
+/* =====================================================
+   GÓRNE MENU
+===================================================== */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* Wszystkie pozycje */
 
 .nav-links a {
+    position: relative;
+
     font-family: "Manrope", sans-serif;
-    color: var(--velora-black);
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--velora-dark);
+
+    text-decoration: none;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* Złota kreska pod napisem */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--velora-gold);
+
+    transition: width 0.35s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+    color: var(--velora-gold);
+
+    transform: translateY(-1px);
+}
+
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   WYCENA PROJEKTU — WYRÓŻNIENIE
+===================================================== */
+
+.nav-links a[href="#wycena"] {
+    color: var(--velora-gold);
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(184, 149, 69, 0.55);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* Usuwamy kreskę pod WYCENĄ */
+
+.nav-links a[href="#wycena"]::after {
+    display: none;
+}
+
+
+/* Hover WYCENA */
+
+.nav-links a[href="#wycena"]:hover {
+    color: #ffffff;
+
+    background: var(--velora-gold);
+
+    border-color: var(--velora-gold);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   EMAIL W NAVBARZE
+===================================================== */
+
+.navbar-contact a {
+    font-family: "Manrope", sans-serif;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    letter-spacing: 0.05em;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.navbar-contact a:hover {
+    color: var(--velora-gold);
+}
+
+
+.navbar-email-icon {
+    color: var(--velora-gold);
+}
+
+
+/* =====================================================
+   PL / EN
+===================================================== */
+
+.language-switcher {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+}
+
+
+.language-btn {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+
+    color: #777777;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.language-btn:hover,
+.language-btn.active {
+    color: var(--velora-gold);
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu-link strong {
+    font-family: "Manrope", sans-serif;
+
+    letter-spacing: 0.08em;
+
     transition:
         color 0.3s ease,
         transform 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--velora-gold);
-}
 
-
-/* =========================================
-   WYCENA PROJEKTU
-========================================= */
-
-.nav-links a[href="#contact"] {
-    color: var(--velora-gold);
-}
-
-.nav-links a[href="#contact"]:hover {
-    color: #111111;
-}
-
-
-/* =========================================
-   DLACZEGO VELORA — RAMKI
-========================================= */
-
-.why-grid {
-    border-top: 1px solid var(--velora-gold-soft);
-    border-bottom: 1px solid var(--velora-gold-soft);
-}
-
-.why-item {
-    border-right: 1px solid var(--velora-gold-soft);
-    transition:
-        background 0.4s ease,
-        transform 0.4s ease,
-        border-color 0.4s ease;
-}
-
-.why-item:first-child {
-    border-left: 1px solid var(--velora-gold-soft);
-}
-
-
-/* =========================================
-   NUMERY 01 — 05
-========================================= */
-
-.why-number {
+.mobile-menu-link span {
     font-family: "Bodoni Moda", Georgia, serif;
-    color: var(--velora-gold);
-    letter-spacing: 0.05em;
-}
 
-
-/* =========================================
-   HOVER RAMKI
-========================================= */
-
-.why-item:hover {
-    background: #ffffff;
-
-    border-color: var(--velora-gold);
-
-    transform: translateY(-8px);
-}
-
-
-/* =========================================
-   TYTUŁY KAFELKÓW
-========================================= */
-
-.why-item h3 {
-    font-family: "Manrope", sans-serif;
-    color: var(--velora-black);
-}
-
-.why-item:hover h3 {
     color: var(--velora-gold);
 }
 
 
-/* =========================================
-   ETYKIETY SEKCJI
-========================================= */
+.mobile-menu-link:hover strong {
+    color: var(--velora-gold);
+
+    transform: translateX(6px);
+}
+
+
+/* =====================================================
+   MOBILE — WYCENA
+===================================================== */
+
+.mobile-menu-link[href="#wycena"] strong {
+    color: var(--velora-gold);
+}
+
+
+/* =====================================================
+   SEKCJE — ZŁOTE ETYKIETY
+===================================================== */
 
 .section-label {
     font-family: "Manrope", sans-serif;
+
     color: var(--velora-gold);
-    letter-spacing: 0.15em;
+
+    letter-spacing: 0.16em;
 }
 
 
-/* =========================================
-   PODKREŚLENIA / LINIE
-========================================= */
+/* =====================================================
+   ZŁOTE NUMERY W OFERCIE
+===================================================== */
 
-.why-header .section-label::after {
-    background: var(--velora-gold);
+.offer-number {
+    font-family: "Bodoni Moda", Georgia, serif;
+
+    color: var(--velora-gold);
+}
+
+
+/* =====================================================
+   LINKI "ODKRYJ"
+===================================================== */
+
+.offer-link,
+.project-link {
+    color: var(--velora-gold);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.offer-link:hover,
+.project-link:hover {
+    color: #111111;
+
+    transform: translateX(5px);
 }
