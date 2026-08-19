@@ -1159,5 +1159,37 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(element => {
         revealObserver.observe(element);
     });
+    // =========================================
+// VELORA — FOOTER REVEAL
+// =========================================
+
+const veloraFooter = document.querySelector(".velora-footer");
+
+if (veloraFooter) {
+
+    const footerObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    veloraFooter.classList.add("footer-visible");
+
+                    observer.unobserve(veloraFooter);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    footerObserver.observe(veloraFooter);
+}
 
 });
+
