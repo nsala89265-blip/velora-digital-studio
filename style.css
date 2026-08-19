@@ -1368,29 +1368,27 @@ body {
     }
 
     .why-grid {
-        grid-template-columns: 1fr;
-        border: none;
-        border-bottom: 1px solid #d9c99f;
-    }
+    grid-template-columns: 1fr;
+    border: none;
+}
 
-    .why-item {
-        min-height: auto;
-        padding: 35px 25px;
+.why-item {
+    min-height: auto;
+    padding: 35px 25px;
 
-        border: 1px solid #d9c99f !important;
-        margin: 0;
-        margin-top: -1px;
+    border: 1px solid #d9c99f !important;
 
-        transform: none;
-    }
+    margin: 0;
+    margin-top: -1px;
 
-    .why-item:first-child {
-        margin-top: 0;
-    }
+    transform: none;
+}
 
-    .why-item:last-child {
-        border-bottom: none !important;
-    }
+.why-item:first-child {
+    margin-top: 0;
+}
+
+  
 
     .why-number {
         margin-bottom: 35px;
