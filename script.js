@@ -1053,32 +1053,70 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 }
 
 // =========================================
-// START STRONY ZAWSZE OD GÓRY
-// =========================================
-
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-}
-
-window.scrollTo(0, 0);
-
-
-// =========================================
-// VELORA — PREMIUM SCROLL REVEAL
+// VELORA — PREMIUM PAGE ANIMATION
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // =====================================
+    // ZAWSZE START OD GÓRY
+    // =====================================
+
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+
+
+    // =====================================
+    // NAVBAR
+    // =====================================
+
+    const navbar = document.querySelector(".navbar");
+
+    if (navbar) {
+
+        setTimeout(() => {
+            navbar.classList.add("navbar-loaded");
+        }, 150);
+
+    }
+
+
+    // =====================================
+    // HERO — PIERWSZY EKRAN
+    // =====================================
+
+    const hero = document.querySelector(".hero");
+
+    if (hero) {
+
+        setTimeout(() => {
+            hero.classList.add("hero-loaded");
+        }, 300);
+
+    }
+
+
+    // =====================================
+    // ELEMENTY POZOSTAŁYCH SEKCJI
+    // =====================================
+
     const revealElements = document.querySelectorAll(`
-        .hero-content,
         .about-frame,
+
         .offer-header,
         .offer-item,
+
         .projects-header,
         .project-card,
+
         .why-header,
         .why-item,
+
         .contact-inner,
+
         .contact-form-header,
         .contact-form .form-group,
         .form-consent,
@@ -1086,13 +1124,15 @@ document.addEventListener("DOMContentLoaded", () => {
     `);
 
 
-    // Dodajemy klasę przygotowującą elementy
     revealElements.forEach(element => {
         element.classList.add("reveal-element");
     });
 
 
-    // Obserwujemy elementy podczas scrollowania
+    // =====================================
+    // SCROLL OBSERVER
+    // =====================================
+
     const revealObserver = new IntersectionObserver(
         (entries, observer) => {
 
@@ -1121,6 +1161,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
-    
-
