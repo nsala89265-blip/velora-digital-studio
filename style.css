@@ -5433,3 +5433,126 @@ body {
     }
 
 }
+
+/* =========================================
+   VELORA — PREMIUM GOLD STYLE
+========================================= */
+
+/* ZŁOTY KOLOR VELORA */
+:root {
+    --velora-gold: #b89545;
+    --velora-gold-soft: rgba(184, 149, 69, 0.45);
+    --velora-black: #111111;
+    --velora-gray: #777777;
+    --velora-bg: #fafaf8;
+}
+
+
+/* =========================================
+   MENU — ZŁOTY AKCENT
+========================================= */
+
+.nav-links a {
+    font-family: "Manrope", sans-serif;
+    color: var(--velora-black);
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--velora-gold);
+}
+
+
+/* =========================================
+   WYCENA PROJEKTU
+========================================= */
+
+.nav-links a[href="#contact"] {
+    color: var(--velora-gold);
+}
+
+.nav-links a[href="#contact"]:hover {
+    color: #111111;
+}
+
+
+/* =========================================
+   DLACZEGO VELORA — RAMKI
+========================================= */
+
+.why-grid {
+    border-top: 1px solid var(--velora-gold-soft);
+    border-bottom: 1px solid var(--velora-gold-soft);
+}
+
+.why-item {
+    border-right: 1px solid var(--velora-gold-soft);
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.why-item:first-child {
+    border-left: 1px solid var(--velora-gold-soft);
+}
+
+
+/* =========================================
+   NUMERY 01 — 05
+========================================= */
+
+.why-number {
+    font-family: "Bodoni Moda", Georgia, serif;
+    color: var(--velora-gold);
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================
+   HOVER RAMKI
+========================================= */
+
+.why-item:hover {
+    background: #ffffff;
+
+    border-color: var(--velora-gold);
+
+    transform: translateY(-8px);
+}
+
+
+/* =========================================
+   TYTUŁY KAFELKÓW
+========================================= */
+
+.why-item h3 {
+    font-family: "Manrope", sans-serif;
+    color: var(--velora-black);
+}
+
+.why-item:hover h3 {
+    color: var(--velora-gold);
+}
+
+
+/* =========================================
+   ETYKIETY SEKCJI
+========================================= */
+
+.section-label {
+    font-family: "Manrope", sans-serif;
+    color: var(--velora-gold);
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================
+   PODKREŚLENIA / LINIE
+========================================= */
+
+.why-header .section-label::after {
+    background: var(--velora-gold);
+}
