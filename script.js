@@ -1244,19 +1244,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // USTAWIENIA
+// USTAWIENIA
 
-    if (cookieSettings) {
+if (cookieSettings) {
 
-        cookieSettings.addEventListener("click", () => {
+    cookieSettings.addEventListener("click", () => {
 
-            alert(
-                "Ustawienia plików cookies będą dostępne wkrótce."
-            );
+        alert(
+            "Ustawienia plików cookies będą dostępne wkrótce."
+        );
 
-        });
+    });
 
-    }
-
-});
-
+}
