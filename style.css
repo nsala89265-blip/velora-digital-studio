@@ -1368,6 +1368,7 @@ body {
     }
 
     .why-grid {
+        display: grid;
         grid-template-columns: 1fr;
         border: none;
     }
@@ -1376,7 +1377,9 @@ body {
         min-height: auto;
         padding: 35px 25px;
 
-        border: 1px solid #d9c99f;
+        border: 1px solid #d9c99f !important;
+
+        margin: 0;
         margin-top: -1px;
 
         transform: none;
@@ -1384,10 +1387,6 @@ body {
 
     .why-item:first-child {
         margin-top: 0;
-    }
-
-    .why-item:last-child {
-        border-bottom: 1px solid #d9c99f;
     }
 
     .why-number {
