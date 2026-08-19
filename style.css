@@ -4509,3 +4509,165 @@ body {
     }
 
 }
+
+/* =========================================
+   FOOTER — VELORA
+========================================= */
+
+.footer {
+    position: relative;
+    padding: 80px 7% 30px;
+    background: #111111;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-logo {
+    font-family: "Bodoni Moda", serif;
+    font-size: 38px;
+    letter-spacing: 0.08em;
+}
+
+.footer-subtitle {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    opacity: 0.55;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-email-icon {
+    font-size: 15px;
+    opacity: 0.65;
+}
+
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    transition: opacity 0.25s ease;
+}
+
+.footer-contact a:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+
+    opacity: 0.65;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DOLNA LINIA
+========================================= */
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom span {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    opacity: 0.4;
+    text-align: center;
+}
+
+
+/* =========================================
+   TELEFON
+========================================= */
+
+@media (max-width: 800px) {
+
+    .footer {
+        padding: 60px 25px 25px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-contact {
+        justify-content: flex-start;
+    }
+
+    .footer-nav {
+        justify-content: flex-start;
+        gap: 15px 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+    }
+
+}
