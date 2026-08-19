@@ -1400,10 +1400,9 @@ body {
         transform: none;
     }
 
-    .why-item:last-child {
-    border-bottom: none;
+.why-item:last-child {
+    border-bottom: 1px solid #d9c99f;
 }
-
 }
 /* =========================
    KONTAKT
