@@ -1191,5 +1191,72 @@ if (veloraFooter) {
     footerObserver.observe(veloraFooter);
 }
 
+
+});
+
+// =========================================
+// VELORA — COOKIE BANNER
+// =========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieAccept = document.getElementById("cookieAccept");
+    const cookieSettings = document.getElementById("cookieSettings");
+
+    if (!cookieBanner) return;
+
+
+    // SPRAWDZAMY, CZY UŻYTKOWNIK JUŻ ZAAKCEPTOWAŁ
+
+    const cookiesAccepted =
+        localStorage.getItem("veloraCookiesAccepted");
+
+
+    // JEŚLI NIE — POKAŻ BANER
+
+    if (cookiesAccepted !== "true") {
+
+        setTimeout(() => {
+
+            cookieBanner.classList.add("cookie-visible");
+
+        }, 800);
+
+    }
+
+
+    // AKCEPTUJĘ
+
+    if (cookieAccept) {
+
+        cookieAccept.addEventListener("click", () => {
+
+            localStorage.setItem(
+                "veloraCookiesAccepted",
+                "true"
+            );
+
+            cookieBanner.classList.remove("cookie-visible");
+
+        });
+
+    }
+
+
+    // USTAWIENIA
+
+    if (cookieSettings) {
+
+        cookieSettings.addEventListener("click", () => {
+
+            alert(
+                "Ustawienia plików cookies będą dostępne wkrótce."
+            );
+
+        });
+
+    }
+
 });
 

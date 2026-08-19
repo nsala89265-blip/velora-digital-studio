@@ -4762,3 +4762,213 @@ body {
     }
 
 }
+
+/* =========================================
+   VELORA — COOKIE BANNER
+========================================= */
+
+.cookie-banner {
+    position: fixed;
+
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+
+    z-index: 99999;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(184, 155, 94, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.12);
+
+    padding: 25px 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s cubic-bezier(.2, .8, .2, 1),
+        visibility 0.5s ease;
+}
+
+
+/* BANER WIDOCZNY */
+
+.cookie-banner.cookie-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* ZAWARTOŚĆ */
+
+.cookie-content {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* TEKST */
+
+.cookie-text {
+    flex: 1;
+}
+
+.cookie-title {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #B89B5E;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+.cookie-text p {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: #555555;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* PRZYCISKI */
+
+.cookie-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* USTAWIENIA */
+
+.cookie-settings {
+    background: transparent;
+
+    border: 1px solid rgba(184, 155, 94, 0.45);
+
+    color: #B89B5E;
+
+    padding: 13px 20px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.cookie-settings:hover {
+    background: #B89B5E;
+    color: #ffffff;
+}
+
+
+/* AKCEPTUJĘ */
+
+.cookie-accept {
+    background: #B89B5E;
+
+    border: 1px solid #B89B5E;
+
+    color: #ffffff;
+
+    padding: 13px 25px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.cookie-accept:hover {
+    background: #a4874b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TELEFON
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cookie-banner {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        padding: 22px;
+    }
+
+    .cookie-content {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    .cookie-text p {
+        font-size: 11px;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+    }
+
+    .cookie-settings,
+    .cookie-accept {
+        flex: 1;
+
+        padding: 13px 10px;
+    }
+
+}
