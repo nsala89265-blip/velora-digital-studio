@@ -1400,6 +1400,10 @@ body {
         transform: none;
     }
 
+    .why-item:last-child {
+    border-bottom: none;
+}
+
 }
 /* =========================
    KONTAKT
