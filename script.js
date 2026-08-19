@@ -1055,37 +1055,104 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 
 
 // =========================================
-// SCROLL REVEAL — VELORA
+// VELORA — PREMIUM REVEAL
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const elements = document.querySelectorAll(
-        ".section-label, .section-title, .section-description, .offer-item, .project-card, .why-item"
-    );
+    const revealElements = document.querySelectorAll(`
+        .hero > *,
+        .section-label,
+        .section-title,
+        .section-description,
 
-    const observer = new IntersectionObserver(
-        (entries) => {
+        .offer-item,
+
+        .project-card,
+
+        .why-item,
+
+        .contact-info > *,
+        .contact-form > *,
+
+        .form-group,
+
+        .service-option,
+        .budget-option,
+
+        .hero-button,
+        .contact-button,
+        .form-submit
+    `);
+
+
+    /* =========================
+       DODANIE KLASY
+    ========================= */
+
+    revealElements.forEach((element) => {
+        element.classList.add("reveal");
+    });
+
+
+    /* =========================
+       ELEMENTY WIDOCZNE OD RAZU
+       (np. HERO)
+    ========================= */
+
+    const heroElements = document.querySelectorAll(".hero .reveal");
+
+    heroElements.forEach((element, index) => {
+
+        element.style.transitionDelay =
+            `${index * 0.12}s`;
+
+    });
+
+
+    /* =========================
+       HERO — POJAWIENIE
+    ========================= */
+
+    requestAnimationFrame(() => {
+
+        heroElements.forEach((element) => {
+            element.classList.add("is-visible");
+        });
+
+    });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const scrollObserver = new IntersectionObserver(
+        (entries, observer) => {
 
             entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+
+                observer.unobserve(entry.target);
 
             });
 
         },
         {
-            threshold: 0.1
+            threshold: 0.12,
+            rootMargin: "0px 0px -50px 0px"
         }
     );
 
-    elements.forEach((element) => {
 
-        element.classList.add("scroll-reveal");
+    revealElements.forEach((element) => {
 
-        observer.observe(element);
+        if (!element.closest(".hero")) {
+            scrollObserver.observe(element);
+        }
 
     });
 
