@@ -1369,6 +1369,10 @@ body {
 
     .why-grid {
         grid-template-columns: 1fr;
+
+        /* tylko zewnętrzne górne i dolne obramowanie */
+        border-top: 1px solid #d9c99f;
+        border-bottom: 1px solid #d9c99f;
     }
 
     .why-item {
@@ -1376,28 +1380,37 @@ body {
 
         padding: 35px 25px;
 
+        /* pionowe linie */
         border-left: 1px solid #d9c99f;
         border-right: 1px solid #d9c99f;
+
+        /* każda karta ma linię oddzielającą ją od następnej */
         border-bottom: 1px solid #d9c99f;
+
+        /* wyłączamy przesunięcia, które mogą powodować szczeliny */
+        transform: none;
     }
 
+    /* pierwsza karta nie potrzebuje dodatkowej górnej linii */
     .why-item:first-child {
-        border-bottom: 1px solid #d9c99f;
+        border-top: none;
     }
 
-    .why-item:nth-child(2),
-    .why-item:nth-child(3),
-    .why-item:nth-child(4) {
-        border-left: 1px solid #d9c99f;
-        border-right: 1px solid #d9c99f;
+    /* ostatnia karta nie potrzebuje własnej dolnej linii,
+       bo dolną linię daje .why-grid */
+    .why-item:last-child {
+        border-bottom: none;
     }
 
     .why-number {
         margin-bottom: 35px;
     }
 
-}
+    .why-item:hover {
+        transform: none;
+    }
 
+}
 /* =========================
    KONTAKT
 ========================= */
