@@ -4311,7 +4311,7 @@ body {
    VELORA — PREMIUM SCROLL REVEAL
 ========================================= */
 
-.reveal {
+.reveal-element {
     opacity: 0;
     transform: translateY(45px);
 
@@ -4322,42 +4322,81 @@ body {
     will-change: opacity, transform;
 }
 
-.reveal.reveal-visible {
+
+/* ELEMENT POJAWIA SIĘ */
+
+.reveal-element.reveal-show {
     opacity: 1;
     transform: translateY(0);
 }
 
 
 /* =========================================
-   KAFELKI — POJAWIAJĄ SIĘ PO KOLEI
+   OFERTA — PO KOLEI
 ========================================= */
 
-.offer-item:nth-child(1),
-.project-card:nth-child(1),
+.offer-item:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.offer-item:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.offer-item:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.offer-item:nth-child(4) {
+    transition-delay: 0.35s;
+}
+
+.offer-item:nth-child(5) {
+    transition-delay: 0.45s;
+}
+
+
+/* =========================================
+   REALIZACJE — PO KOLEI
+========================================= */
+
+.project-card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.project-card:nth-child(4) {
+    transition-delay: 0.35s;
+}
+
+
+/* =========================================
+   DLACZEGO VELORA — PO KOLEI
+========================================= */
+
 .why-item:nth-child(1) {
     transition-delay: 0.05s;
 }
 
-.offer-item:nth-child(2),
-.project-card:nth-child(2),
 .why-item:nth-child(2) {
     transition-delay: 0.15s;
 }
 
-.offer-item:nth-child(3),
-.project-card:nth-child(3),
 .why-item:nth-child(3) {
     transition-delay: 0.25s;
 }
 
-.offer-item:nth-child(4),
-.project-card:nth-child(4),
 .why-item:nth-child(4) {
     transition-delay: 0.35s;
 }
 
-.offer-item:nth-child(5),
-.project-card:nth-child(5),
 .why-item:nth-child(5) {
     transition-delay: 0.45s;
 }
@@ -4418,12 +4457,49 @@ body {
 
 
 /* =========================================
+   FORMULARZ
+========================================= */
+
+.contact-form .form-group:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.contact-form .form-group:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.contact-form .form-group:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.contact-form .form-group:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.contact-form .form-group:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.contact-form .form-group:nth-child(6) {
+    transition-delay: 0.30s;
+}
+
+.form-consent {
+    transition-delay: 0.35s;
+}
+
+.form-submit {
+    transition-delay: 0.40s;
+}
+
+
+/* =========================================
    TELEFON
 ========================================= */
 
 @media (max-width: 600px) {
 
-    .reveal {
+    .reveal-element {
         transform: translateY(25px);
 
         transition:
@@ -4440,7 +4516,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .reveal {
+    .reveal-element {
         opacity: 1;
         transform: none;
         transition: none;

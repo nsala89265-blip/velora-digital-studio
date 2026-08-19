@@ -1052,6 +1052,15 @@ if (mobileMenuButton && mobileMenu && mobileMenuClose) {
 
 }
 
+// =========================================
+// START STRONY ZAWSZE OD GÓRY
+// =========================================
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
 
 
 // =========================================
@@ -1071,53 +1080,27 @@ document.addEventListener("DOMContentLoaded", () => {
         .why-item,
         .contact-inner,
         .contact-form-header,
-        .form-group,
-        .service-option,
-        .budget-option,
+        .contact-form .form-group,
         .form-consent,
         .form-submit
     `);
 
-    // Dodajemy klasę do wszystkich elementów
+
+    // Dodajemy klasę przygotowującą elementy
     revealElements.forEach(element => {
-        element.classList.add("reveal");
+        element.classList.add("reveal-element");
     });
 
 
-    // =========================================
-    // HERO — POJAWIA SIĘ OD RAZU PO WEJŚCIU
-    // =========================================
-
-    const heroElements = document.querySelectorAll(`
-        .hero-content > *
-    `);
-
-    heroElements.forEach((element, index) => {
-
-        element.classList.add("reveal");
-
-        element.style.transitionDelay =
-            `${index * 0.12}s`;
-
-        setTimeout(() => {
-            element.classList.add("reveal-visible");
-        }, 100);
-
-    });
-
-
-    // =========================================
-    // SCROLL REVEAL
-    // =========================================
-
-    const observer = new IntersectionObserver(
+    // Obserwujemy elementy podczas scrollowania
+    const revealObserver = new IntersectionObserver(
         (entries, observer) => {
 
             entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
-                    entry.target.classList.add("reveal-visible");
+                    entry.target.classList.add("reveal-show");
 
                     observer.unobserve(entry.target);
 
@@ -1134,12 +1117,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     revealElements.forEach(element => {
-
-        // Hero pomijamy, bo pojawia się od razu
-        if (!element.closest(".hero")) {
-            observer.observe(element);
-        }
-
+        revealObserver.observe(element);
     });
 
 });
+
+    
+
