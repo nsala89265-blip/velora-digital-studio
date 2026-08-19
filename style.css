@@ -4972,3 +4972,462 @@ body {
     }
 
 }
+
+/* =========================================
+   VELORA — COOKIE CONSENT
+========================================= */
+
+.cookie-consent {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 999999;
+
+    background: #1d1d1d;
+
+    color: #ffffff;
+
+    padding: 20px 30px 16px;
+
+    box-shadow:
+        0 -10px 40px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.55s cubic-bezier(.2, .8, .2, 1),
+        visibility 0.45s ease;
+}
+
+
+/* POJAWIENIE */
+
+.cookie-consent.cookie-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* ZAWARTOŚĆ */
+
+.cookie-consent-inner {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TYTUŁ
+========================================= */
+
+.cookie-consent h2 {
+    margin: 0 0 10px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   OPIS
+========================================= */
+
+.cookie-description {
+    max-width: 760px;
+
+    margin: 0 auto 18px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.cookie-description a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    transition: opacity 0.25s ease;
+}
+
+.cookie-description a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   KATEGORIE
+========================================= */
+
+.cookie-categories {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    margin: 14px 0 22px;
+}
+
+
+.cookie-category {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    color: #ffffff;
+
+    user-select: none;
+}
+
+
+/* UKRYWAMY DOMYŚLNY CHECKBOX */
+
+.cookie-category input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* WŁASNY CHECKBOX */
+
+.cookie-checkbox {
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 3px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* ZAZNACZONY */
+
+.cookie-category input:checked + .cookie-checkbox {
+    background: #B89B5E;
+
+    border-color: #B89B5E;
+}
+
+
+/* PTASZEK */
+
+.cookie-category input:checked + .cookie-checkbox::after {
+    content: "✓";
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* NIEZBĘDNE */
+
+.cookie-category.required .cookie-checkbox {
+    background: #666666;
+
+    border-color: #666666;
+}
+
+.cookie-category.required strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PRZYCISKI
+========================================= */
+
+.cookie-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+.cookie-btn {
+    min-width: 220px;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* AKCEPTUJ */
+
+.cookie-accept-all {
+    border: none;
+
+    background: #69c36b;
+
+    color: #ffffff;
+}
+
+.cookie-accept-all:hover {
+    background: #5ab45c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ODRZUĆ */
+
+.cookie-reject-all {
+    border: 1px solid #ffffff;
+
+    background: transparent;
+
+    color: #ffffff;
+}
+
+.cookie-reject-all:hover {
+    background: #ffffff;
+
+    color: #1d1d1d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   POKAŻ SZCZEGÓŁY
+========================================= */
+
+.cookie-details-btn {
+    border: none;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition: color 0.25s ease;
+}
+
+.cookie-details-btn:hover {
+    color: #B89B5E;
+}
+
+
+.cookie-gear {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   PANEL SZCZEGÓŁÓW
+========================================= */
+
+.cookie-details-panel {
+    max-width: 850px;
+
+    margin: 20px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: none;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    text-align: left;
+}
+
+.cookie-details-panel.active {
+    display: grid;
+}
+
+
+.cookie-detail-item {
+    padding: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+.cookie-detail-item strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #B89B5E;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.cookie-detail-item p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TELEFON
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cookie-consent {
+        padding: 22px 18px 18px;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+    }
+
+    .cookie-consent h2 {
+        font-size: 19px;
+    }
+
+    .cookie-description {
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+    .cookie-categories {
+        justify-content: flex-start;
+
+        gap: 14px 18px;
+
+        margin-bottom: 20px;
+    }
+
+    .cookie-category {
+        font-size: 10px;
+    }
+
+    .cookie-checkbox {
+        width: 19px;
+        height: 19px;
+    }
+
+    .cookie-actions {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .cookie-btn {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .cookie-details-panel.active {
+        grid-template-columns: 1fr;
+    }
+
+}
