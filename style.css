@@ -1368,9 +1368,9 @@ body {
     }
 
     .why-grid {
-        display: grid;
         grid-template-columns: 1fr;
         border: none;
+        border-bottom: 1px solid #d9c99f;
     }
 
     .why-item {
@@ -1378,7 +1378,6 @@ body {
         padding: 35px 25px;
 
         border: 1px solid #d9c99f !important;
-
         margin: 0;
         margin-top: -1px;
 
@@ -1389,6 +1388,10 @@ body {
         margin-top: 0;
     }
 
+    .why-item:last-child {
+        border-bottom: none !important;
+    }
+
     .why-number {
         margin-bottom: 35px;
     }
@@ -1396,7 +1399,6 @@ body {
     .why-item:hover {
         transform: none;
     }
-
 }
 /* =========================
    KONTAKT
